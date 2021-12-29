@@ -1,0 +1,6 @@
+[submodule "de-cms"]
+	path = de-cms
+	url = git@github.com:Rolfchen/de-cms.git
+[submodule "de-fend"]
+	path = de-fend
+	url = git@github.com:Rolfchen/de-fend.git

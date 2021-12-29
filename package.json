@@ -1,0 +1,10 @@
+{
+  "name": "dataestate-website",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "de-cms",
+    "de-fend",
+    "website"
+  ]
+}
