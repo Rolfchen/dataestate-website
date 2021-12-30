@@ -2,6 +2,9 @@
   "name": "dataestate-website",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "dev": "yarn workspace website dev"
+  },
   "workspaces": [
     "de-cms",
     "de-fend",
