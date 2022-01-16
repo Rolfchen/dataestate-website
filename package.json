@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "yarn workspace de-fend dev & yarn workspace website dev"
+    "dev": "yarn workspace de-fend dev & yarn workspace de-cms dev & yarn workspace website dev"
   },
   "workspaces": [
     "de-cms",

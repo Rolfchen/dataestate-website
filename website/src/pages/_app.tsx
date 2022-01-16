@@ -13,6 +13,8 @@ import {
 } from 'de-fend';
 
 import { theme } from '../styles';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { CmsApiProvider } from 'de-cms';
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -32,16 +34,27 @@ function MyApp({
   pageProps,
 }: ExtendedAppProps) {
   initFirebase();
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        refetchOnWindowFocus: false,
+      },
+    },
+  });
   return (
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
-        <AppModalProvider>
-          <UserProvider>
-            <CssBaseline />
-            <Component {...pageProps} />
-            <LoginModal />
-          </UserProvider>
-        </AppModalProvider>
+        <QueryClientProvider client={queryClient} contextSharing={true}>
+          <CmsApiProvider apiUrl="http://localhost:3000/api/">
+            <AppModalProvider>
+              <UserProvider>
+                <CssBaseline />
+                <Component {...pageProps} />
+                <LoginModal />
+              </UserProvider>
+            </AppModalProvider>
+          </CmsApiProvider>
+        </QueryClientProvider>
       </ThemeProvider>
     </CacheProvider>
   );
