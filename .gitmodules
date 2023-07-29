@@ -4,3 +4,6 @@
 [submodule "de-fend"]
 	path = de-fend
 	url = git@github.com:Rolfchen/de-fend.git
+[submodule "de-api"]
+	path = de-api
+	url = git@github.com:Rolfchen/de-api.git

@@ -39,6 +39,9 @@
   "references": [
     {
       "path": "../de-fend"
+    },
+    {
+      "path": "../de-api"
     }
   ],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
